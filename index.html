@@ -3,163 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketplace Demo</title>
-<style>
-  /* Basic reset and styling */
-  body {
-    font-family: system-ui, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f7f6;
-    color: #333;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #2c3e50;
-  }
-
-  /* Tab buttons */
-  .tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .tab-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #d1d8e0;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-
-  .tab-btn.active {
-    background-color: #3498db;
-    color: white;
-  }
-
-  /* User cards */
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-  }
-
-  .info h3 {
-    margin: 0;
-    font-size: 16px;
-  }
-
-  .info p {
-    margin: 5px 0 0;
-    font-size: 13px;
-    color: #777;
-  }
-
-  .action-btn {
-    margin-left: auto;
-    background-color: #2ecc71;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px;
-  }
-</style>
+<title>vorgmedia</title>
 </head>
+
 <body>
 
-  <h1>Marketplace</h1>
+<h1>INTRODUCTION TO WEB DEVELOPMENT</h1>
+<p>Elements<br>
+HTML (Hypertext Markup Language) is the standard markup language for creating web pages. It consists of various elements that define the structure and content of a web page. <br>
+Commonly Used HTML Elements
 
-  <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('buyer')">Buyers</button>
-    <button class="tab-btn" onclick="switchTab('seller')">Sellers</button>
-  </div>
+<li>Headings</li>
+h1 to h6: These tags define headings of different levels, with h1 being the highest level and h6 being the lowest. Headings are important for SEO and accessibility as they help to structure the content and make it easier to navigate.
 
-  <div class="container" id="list-container">
-    <!-- Cards will be loaded here by JavaScript -->
-  </div>
+<li>Text Content</li>
+p : This tag defines a paragraph of text. Paragraphs are block-level elements, meaning they start on a new line and take up the full width available. <br>
+a : The anchor tag is used to create hyperlinks, which are clickable links that navigate to other web pages or resources. The href attribute specifies the URL of the linked resource. <br>
+span : This is an inline container element used to apply styles or manipulate text within a larger block of content. Unlike <div> , it does not start on a new line. <br>
 
-<script>
-  // Mock Data: Buyers and Sellers
-  const marketplaceData = {
-    buyer: [
-      { name: "Alice M.", desc: "Looking for a laptop", icon: "🛒" },
-      { name: "John B.", desc: "Buying textbooks", icon: "📚" },
-      { name: "Mary T.", desc: "Wants a used phone", icon: "📱" }
-    ],
-    seller: [
-      { name: "Tech Store", desc: "Selling HP Laptops", icon: "💻" },
-      { name: "Campus Books", desc: "Economics textbooks", icon: "📖" },
-      { name: "Sam K.", desc: "Samsung A12 (Used)", icon: "📱" }
-    ]
-  };
+<li>Images and Media</li>
+img : This tag is used to embed images in a web page. It is a self-closing tag and requires the src attribute to specify the path to the image file, and the alt attribute to provide alternative text for accessibility. <br>
 
-  // Function to display the data based on the selected tab
-  function renderList(role) {
-    const container = document.getElementById("list-container");
-    container.innerHTML = ""; // Clear current list
+<li>Lists</li>
+ul : Unordered list, which displays a list of items with bullet points. <br>
+ol : Ordered list, which displays a list of items with numbers. <br>
+li : List item, used within ul or ol to define individual list items.
+</p>
 
-    const users = marketplaceData[role];
-    
-    users.forEach(user => {
-      // Create card element
-      const card = document.createElement("div");
-      card.className = "card";
-      
-      // Put HTML inside the card
-      card.innerHTML = `
-        <div class="avatar">${user.icon}</div>
-        <div class="info">
-          <h3>${user.name}</h3>
-          <p>${user.desc}</p>
-        </div>
-        <button class="action-btn" onclick="alert('Connecting to ${user.name}...')">Connect</button>
-      `;
-      
-      container.appendChild(card);
-    });
-  }
+<h2>INTRODUCTION TO CYBERSECURITY</h2>
 
-  // Function to handle tab switching
-  function switchTab(role) {
-    // Update button colors
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+<p>1.1 Network and Security Concepts
+1.1.1 Information Assurance Fundamentals
+Authentication, authorization, and nonrepudiation are tools that system designers can use to maintain system security with respect to confidentiality, integrity, and availability. Understanding each of these six concepts and how they relate to one another helps security professionals design and implement secure systems. Each component is critical to overall security, with the failure of any one component resulting in potential system compromise.
+There are three key concepts, known as the CIA triad, which any-
+one who protects an information system must understand: confidentiality, integrity, and availability. Information security professionals are dedicated to ensuring the protection of these principals for each system they protect. Additionally, there are three key concepts that security professionals must understand to enforce the CIA principles properly: authentication, authorization, and nonrepudiation. In this section, we explain each of these concepts and how they relate to each other in the digital security realm. All definitions used in this section originate from the National Information Assurance Glossary (NIAG) published by the U.S. Committee on National Security Systems.<br>
 
-    // Load new data
-    renderList(role);
-  }
-
-  // Load buyers by default when page opens
-  renderList('buyer');
-</script>
-<p> #So you mean,I mean,from what I observed running the codes; first of all I define rng [as Generator (PCG64) code]. Then,it seems all other elements I defined (B,C,D,E), run  according to this rng I defined. Here is where it gets more interesting, if you look at line 6, B =rng.integers(0,20, size=5), I defined size, then line 8, D =rng.integers(0,20,5), they produce the same results, does this mean that python is able to know 5 in line 8 means size? How can then I differentiate this 5 in line 8 which works under rng from 5 in line 4, A =np.arange(0,20,5) which works under deterministic code</p>
+1.1.1.1 Authentication Authentication is important to any secure system, as it is the key to verifying the source of a message or that an individual is whom he or she claims. The NIAG defines authentication as a “security measure designed to establish the validity of a transmission, message, or originator, or a means of verifying an individual’s authorization to receive specific categories of information.”</p>
+ 
 </body>
-</html>
+  </html>
